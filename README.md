@@ -40,6 +40,11 @@ As you can see in the demo, I just created a class called position-fixed and add
 }
 ```
 
+#### Enabeling clicks on certain elements inside the contextmenu
+
+If you need to use an input inside the contextmenu and do not with to close the context menu on left click, you can add a class to ```data-keep-opened``` attribute.
+Then you just need to add the referred class to the elementthat you wish not to close on left click.
+
 #### Disabling the contextmenu
 
 If you need to disable the contextmenu in certain circumstances, you can add an expression to the

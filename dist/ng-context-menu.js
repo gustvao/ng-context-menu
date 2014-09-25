@@ -82,9 +82,11 @@ angular
         }
 
         function handleClickEvent(event) {
+          var keepOpened = angular.element(event.target).hasClass($attrs.keepOpened);
           if (!$scope.disabled() &&
             opened &&
-            (event.button !== 2 || event.target !== ContextMenuService.element)) {
+            (!keepOpened &&
+            (event.button !== 2 || event.target !== ContextMenuService.element))) {
             $scope.$apply(function() {
               close(ContextMenuService.menuElement);
             });
